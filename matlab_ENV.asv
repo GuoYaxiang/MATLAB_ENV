@@ -150,7 +150,7 @@ else
     fid = 0;
 end
 
-if ImgTar ~= 0                              %如果选择了待匹配图像则把它作为参数（优先处理单幅图）
+if ImgTar ~= 0
     if ImgTemp ~= 0
         [flagDone,rpos,cpos] = BaseFunc(ImgTar,ImgTemp);
     else
@@ -215,8 +215,7 @@ end
 if SaveTextEnable
     fclose(fid);
 end
-
-%   关闭操作
+% --- Executes on button press in CloseAll.
 function CloseAll_Callback(hObject, eventdata, handles)
 % hObject    handle to CloseAll (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -226,7 +225,7 @@ close all;
 clc;
 close();
 
-%% 各项具体的设置，功能在实际应用中完善
+% --- Executes on button press in SaveTextEnable.
 function SaveTextEnable_Callback(hObject, eventdata, handles)
 % hObject    handle to SaveTextEnable (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
